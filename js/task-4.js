@@ -11,10 +11,12 @@ decrementAction.addEventListener ('click', decrement);
 
 function  increment () {
     counterValue +=1;
-    document.getElementById('value').innerHTML = counterValue;
+    document.getElementById('value').textContent = counterValue;
 }
 
 function decrement () {
     counterValue -= 1;
-    document.getElementById('value').innerHTML = counterValue;
+    document.getElementById('value').textContent = counterValue;
 }
+
+

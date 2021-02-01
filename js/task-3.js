@@ -17,16 +17,30 @@ const images = [
   ];
 
 
+  // const galleryRef = document.querySelector ('#gallery');
+
+  // const galleryimages = images.map(image =>{
+  //     const item = document.createElement('li');
+  //     const picture = document.createElement('img');
+  //     picture.setAttribute('src', image.url);
+  //     picture.setAttribute('alt',image.alt);
+  //     item.appendChild(picture);
+  //     return item;
+  // });
+
+  // galleryRef.append(...galleryimages);
+
+
+  
+  // 3.2
+
   const galleryRef = document.querySelector ('#gallery');
 
-  const galleryimages = images.map(image =>{
-      const item = document.createElement('li');
-      const picture = document.createElement('img');
-      picture.setAttribute('src', image.url);
-      picture.setAttribute('alt',image.alt);
-      item.appendChild(picture);
-      return item;
+  const addImages = images.map (image => {
+    const createElement = document.createElement ('li');
+    
+    createElement.insertAdjacentHTML('beforeend', `<img src = ${image.url} alt = ${image.alt}>`);
+    return createElement;
   });
 
-  galleryRef.append(...galleryimages);
-
+  galleryRef.append(...addImages);

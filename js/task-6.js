@@ -8,14 +8,8 @@ function validationCheck (event) {
         
         inputValidRef.classList.add("valid");
         inputValidRef.classList.remove("invalid");
-       
-       
     } else {
         inputValidRef.classList.remove("valid");
-        inputValidRef.classList.add("invalid");
-        
-        
-        
-        
+        inputValidRef.classList.add("invalid");   
     }
 };
